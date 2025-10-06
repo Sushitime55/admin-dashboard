@@ -1,7 +1,8 @@
 :root {
   --light-blue: rgb(0, 191, 255);
-  --dashboard-and-button-text-color: white;
-  --header-gap: 16px;
+  --text-color-dashboard-and-buttons: white;
+  --gap-header: 16px;
+  --font-size-dashboard: 1.5rem;
 }
 
 *,
@@ -15,6 +16,8 @@
 }
 
 body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
 }
 
@@ -53,14 +56,10 @@ svg {
   justify-content: space-between;
 }
 
-.header > .searchbar > .search {
-  display: flex;
-  gap: var(--header-gap);
-}
-
+.header > .searchbar > .search,
 .header > .searchbar > .user-info {
   display: flex;
-  gap: var(--header-gap);
+  gap: var(--gap-header);
 }
 
 .header > .creator {
@@ -72,23 +71,35 @@ svg {
 .header > .creator > .user-handle {
   display: flex;
   align-items: center;
-  gap: var(--header-gap);
+  gap: var(--gap-header);
 }
 
 .header > .creator > .creator-buttons {
   display: flex;
-  gap: var(--header-gap);
+  gap: var(--gap-header);
 }
 
 .header > .creator > .creator-buttons > .creator-button {
   background-color: var(--light-blue);
-  color: var(--dashboard-and-button-text-color);
+  color: var(--text-color-dashboard-and-buttons);
 }
 
 .dashboard {
   background-color: var(--light-blue);
-  color: var(--dashboard-and-button-text-color);
+  color: var(--text-color-dashboard-and-buttons);
   grid-area: 1/1/3/2;
+  padding: 8px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  font-size: var(--font-size-dashboard);
+}
+
+.dashboard > .links,
+.dashboard > .settings {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .content {
