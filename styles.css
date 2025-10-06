@@ -102,12 +102,31 @@ svg {
   gap: 8px;
 }
 
-.content {
+.main-content {
   background-color: lightslategray;
   grid-area: 2/2/3/3;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  padding: 16px;
+}
+
+.main-content > .projects > .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+}
+
+.main-content > .projects > .project-grid > .project {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  border-left: 4px solid orange;
+}
+
+.main-content > .projects > .project-grid > .project > .project-buttons {
+  display: flex;
+  justify-content: end;
 }
 
 .content > .projects {
