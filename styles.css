@@ -3,9 +3,11 @@
   --background-color-dashboard-and-buttons: rgb(0, 191, 255);
   --background-color-header-and-cards: whitesmoke;
   --background-color-main-content: rgb(194, 207, 219);
+  --hover-background-color-dashboard-and-buttons: rgb(0, 149, 199);
   --gap-header: 16px;
   --font-size-dashboard: 1.2rem;
-  --image-width-dashboard: 30px;
+  --image-width-svg: 20px;
+  --image-width-profile-picture: 50px;
 }
 
 *,
@@ -41,7 +43,7 @@ svg {
 }
 
 .grid-subsection {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .header {
@@ -49,8 +51,10 @@ svg {
   grid-area: 1/2/2/3;
   display: grid;
   grid-template-rows: 1fr 2fr;
-  padding: 0px 32px;
-  /* box-shadow: 2px 2px 3px grey; */
+  padding: 0px 48px;
+  padding-top: 16px;
+  box-shadow: 2px 2px 3px grey;
+  z-index: 1;
 }
 
 .header > .searchbar {
@@ -63,6 +67,47 @@ svg {
 .header > .searchbar > .user-info {
   display: flex;
   gap: var(--gap-header);
+  flex: 1;
+  align-items: center;
+}
+
+.header > .searchbar > .user-info {
+  justify-content: end;
+}
+
+.header > .searchbar > div > div > img {
+  min-width: var(--image-width-svg);
+}
+
+.header > .searchbar > .search > input[type="text"] {
+  background-color: var(--background-color-main-content);
+  border: none;
+  border-radius: 20px;
+  flex: 1;
+  padding: 4px;
+  min-width: 100px;
+  max-width: 400px;
+  /* better align cursor with input box */
+  padding-left: 10px;
+}
+
+.header > .searchbar > div > .profile-image-wrapper {
+  height: var(--image-width-profile-picture);
+  width: var(--image-width-profile-picture);
+}
+
+.header > .creator > .user-handle > .profile-image-wrapper {
+  height: calc(1.5 * var(--image-width-profile-picture));
+  width: calc(1.5 * var(--image-width-profile-picture));
+}
+
+.profile-image-wrapper {
+  border: 1px solid black;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header > .creator {
@@ -85,6 +130,14 @@ svg {
 .header > .creator > .creator-buttons > .creator-button {
   background-color: var(--background-color-dashboard-and-buttons);
   color: var(--text-color-dashboard-and-buttons);
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: none;
+}
+
+.header > .creator > .creator-buttons > .creator-button:hover {
+  background-color: var(--hover-background-color-dashboard-and-buttons);
+  cursor: pointer;
 }
 
 .dashboard {
@@ -112,8 +165,8 @@ svg {
 }
 
 .dashboard > div > .icon-text-pair > div > img {
-  /* width: var(--image-width-dashboard); */
-  min-width: var(--image-width-dashboard);
+  /* width: var(--image-width-svg); */
+  min-width: var(--image-width-svg);
   /* change color of svg from black to white by inverting */
   filter: invert();
 }
