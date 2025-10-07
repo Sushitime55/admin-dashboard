@@ -84,7 +84,7 @@ p {
   justify-content: end;
 }
 
-.header > .searchbar > div > div > img {
+.header > .searchbar > div > div > a > img {
   min-width: var(--image-width-svg);
 }
 
@@ -246,7 +246,7 @@ p {
   height: 24px;
 }
 
-.main-content > .projects > .project-grid > .project > .project-links > img {
+.main-content > .projects > .project-grid > .project > .project-links > a > img {
   width: var(--image-width-svg);
 }
 
