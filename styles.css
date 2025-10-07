@@ -4,7 +4,8 @@
   --background-color-header-and-cards: whitesmoke;
   --background-color-main-content: rgb(194, 207, 219);
   --gap-header: 16px;
-  --font-size-dashboard: 1.5rem;
+  --font-size-dashboard: 1.2rem;
+  --image-width-dashboard: 30px;
 }
 
 *,
@@ -101,7 +102,22 @@ svg {
 .dashboard > .settings {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+}
+
+.dashboard > div > .icon-text-pair {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard > div > .icon-text-pair > div > img {
+  /* width: var(--image-width-dashboard); */
+  min-width: var(--image-width-dashboard);
+}
+
+.dashboard > .dash > .icon-text-pair > p {
+  font-size: calc(1.3 * var(--font-size-dashboard));
 }
 
 .main-content {
