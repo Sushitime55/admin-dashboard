@@ -114,6 +114,8 @@ svg {
 .dashboard > div > .icon-text-pair > div > img {
   /* width: var(--image-width-dashboard); */
   min-width: var(--image-width-dashboard);
+  /* change color of svg from black to white by inverting */
+  filter: invert();
 }
 
 .dashboard > .dash > .icon-text-pair > p {
