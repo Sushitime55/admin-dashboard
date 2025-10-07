@@ -329,6 +329,10 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--text-color-dashboard-and-buttons);
+  color: black;
   cursor: pointer;
+}
+
+a.icon-text-pair {
+  color: var(--text-color-dashboard-and-buttons);
 }
