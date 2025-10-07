@@ -9,6 +9,7 @@
   --gap-main-content: 24px;
   --font-size-dashboard: 1.2rem;
   --font-size-subtext: 0.8rem;
+  --font-size-large-text: 1.2rem;
   --image-width-svg: 20px;
   --image-width-profile-picture: 50px;
 }
@@ -268,4 +269,12 @@ svg {
 .subtext {
   color: var(--text-color-subtext);
   font-size: var(--font-size-subtext);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.large-text {
+  font-size: var(--font-size-large-text);
 }
