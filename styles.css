@@ -102,12 +102,16 @@ p {
 
 .header > .searchbar > div > .profile-image-wrapper {
   height: var(--image-width-profile-picture);
+  min-height: var(--image-width-profile-picture);
   width: var(--image-width-profile-picture);
+  min-width: var(--image-width-profile-picture);
 }
 
 .header > .creator > .user-handle > .profile-image-wrapper {
   height: calc(1.5 * var(--image-width-profile-picture));
+  min-height: calc(1.5 * var(--image-width-profile-picture));
   width: calc(1.5 * var(--image-width-profile-picture));
+  min-width: calc(1.5 * var(--image-width-profile-picture));
 }
 
 .profile-image-wrapper {
@@ -309,7 +313,9 @@ p {
 
 .trending > .trending-flex > .trend > .profile-image-wrapper {
   height: var(--image-width-profile-picture);
+  min-height: var(--image-width-profile-picture);
   width: var(--image-width-profile-picture);
+  min-width: var(--image-width-profile-picture);
 }
 
 /* miscellaneous text changes */
