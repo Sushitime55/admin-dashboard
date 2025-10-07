@@ -51,6 +51,7 @@ p {
 }
 
 .grid-subsection {
+  /* show borders for major components */
   /* border: 1px solid black; */
 }
 
@@ -164,6 +165,11 @@ p {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.dashboard > .links > .icon-text-pair:hover,
+.dashboard > .settings > .icon-text-pair:hover {
+  background-color: var(--hover-background-color-dashboard-and-buttons);
 }
 
 .dashboard > div > .icon-text-pair {
@@ -319,4 +325,10 @@ p {
 
 .large-text {
   font-size: var(--font-size-large-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-dashboard-and-buttons);
+  cursor: pointer;
 }
