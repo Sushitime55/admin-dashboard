@@ -232,8 +232,17 @@ svg {
 }
 
 .main-content > .announcements > .announcements-flex > .announcement {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   flex: 1;
+}
+
+.main-content > .announcements > .announcements-flex > .announcement > .announcement-text {
+  /* limit subtext shown to 3 lines in announcements */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .announcement + .announcement {
@@ -265,6 +274,8 @@ svg {
   height: var(--image-width-profile-picture);
   width: var(--image-width-profile-picture);
 }
+
+/* miscellaneous text changes */
 
 .subtext {
   color: var(--text-color-subtext);
