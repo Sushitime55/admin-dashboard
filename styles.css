@@ -1,11 +1,14 @@
 :root {
   --text-color-dashboard-and-buttons: white;
+  --text-color-subtext: rgb(108, 120, 134);
   --background-color-dashboard-and-buttons: rgb(0, 191, 255);
   --background-color-header-and-cards: whitesmoke;
   --background-color-main-content: rgb(194, 207, 219);
   --hover-background-color-dashboard-and-buttons: rgb(0, 149, 199);
-  --gap-header: 16px;
+  --gap-header: 24px;
+  --gap-main-content: 24px;
   --font-size-dashboard: 1.2rem;
+  --font-size-subtext: 0.8rem;
   --image-width-svg: 20px;
   --image-width-profile-picture: 50px;
 }
@@ -182,12 +185,19 @@ svg {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 16px;
+  gap: var(--gap-main-content);
+}
+
+.project,
+.announcements-flex,
+.trending-flex {
+  border-radius: 10px;
 }
 
 .main-content > .projects > .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 24px;
+  gap: var(--gap-main-content);
 }
 
 .main-content > .projects > .project-grid > .project {
@@ -246,7 +256,16 @@ svg {
 .trending > .trending-flex > .trend {
   display: flex;
   align-items: center;
-  border: 2px solid green;
   gap: 12px;
   flex: 1;
+}
+
+.trending > .trending-flex > .trend > .profile-image-wrapper {
+  height: var(--image-width-profile-picture);
+  width: var(--image-width-profile-picture);
+}
+
+.subtext {
+  color: var(--text-color-subtext);
+  font-size: var(--font-size-subtext);
 }
